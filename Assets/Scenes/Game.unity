@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 202745649}
   - component: {fileID: 202745648}
   m_Layer: 5
-  m_Name: Botton Text
+  m_Name: Button Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -546,7 +546,7 @@ GameObject:
   - component: {fileID: 1264615676}
   - component: {fileID: 1264615675}
   m_Layer: 5
-  m_Name: Resume Botton
+  m_Name: Resume Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,7 +761,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1431192887}
   - component: {fileID: 1431192886}
-  - component: {fileID: 1431192885}
   - component: {fileID: 1431192889}
   - component: {fileID: 1431192888}
   m_Layer: 0
@@ -771,18 +770,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1431192885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431192884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4ae372e600fd14b9c3925184f035c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1431192886
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -5,29 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private string nomeDoLevelDeJogo;
-    [SerializeField] private GameObject painelMenuInicial;
-    [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private string loadLevel;
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject optionsPanel;
 
-    public void Joga()
+    public void Play()
     {
-        SceneManager.LoadScene(nomeDoLevelDeJogo);
+        SceneManager.LoadScene(loadLevel);
     
     }
 
-    public void AbriOpcoes()
+    public void OpenOptions()
     {
-        painelMenuInicial.SetActive(false);
-        painelOpcoes.SetActive(true);
+        mainMenuPanel.SetActive(false);
+        optionsPanel.SetActive(true);
     }
 
-    public void FecharOpcoes()
+    public void CloseOptions()
     {
-        painelOpcoes.SetActive(false);
-        painelMenuInicial.SetActive(true);
+        optionsPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
     }
 
-    public void SairJogo()
+    public void QuitGame()
     {
         Debug.Log("Sair do Jogo");
         Application.Quit();

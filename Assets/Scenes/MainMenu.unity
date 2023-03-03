@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 68828424}
   - component: {fileID: 68828423}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Play Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 431751469}
   - component: {fileID: 431751468}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Option Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 619453001}
   - component: {fileID: 619453000}
   m_Layer: 5
-  m_Name: OptionButton
+  m_Name: Option Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,7 +634,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1397703375}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: AbriOpcoes
+        m_MethodName: OpenOptions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 780523847}
   - component: {fileID: 780523846}
   m_Layer: 5
-  m_Name: SairButton
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,7 +768,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1397703375}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: SairJogo
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 848092703}
   - component: {fileID: 848092702}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Quit Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1308,7 +1308,7 @@ GameObject:
   - component: {fileID: 1044572793}
   - component: {fileID: 1044572792}
   m_Layer: 5
-  m_Name: Sencibilidade
+  m_Name: Sensitivity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1367,7 +1367,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sencibilidade
+  m_Text: Sensibilidade
 --- !u!222 &1044572793
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1464,7 +1464,7 @@ GameObject:
   - component: {fileID: 1201096303}
   - component: {fileID: 1201096302}
   m_Layer: 5
-  m_Name: Titulo
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1544,7 +1544,7 @@ GameObject:
   - component: {fileID: 1271894898}
   - component: {fileID: 1271894897}
   m_Layer: 5
-  m_Name: Som
+  m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1820,9 +1820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da52cee073426a947ab6c00f95dddb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeDoLevelDeJogo: Game
-  painelMenuInicial: {fileID: 1370607094}
-  painelOpcoes: {fileID: 2049062055}
+  loadLevel: Game
+  mainMenuPanel: {fileID: 1370607094}
+  optionsPanel: {fileID: 2049062055}
 --- !u!4 &1397703376
 Transform:
   m_ObjectHideFlags: 0
@@ -1850,7 +1850,7 @@ GameObject:
   - component: {fileID: 1407931064}
   - component: {fileID: 1407931063}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Back Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1931,7 +1931,7 @@ GameObject:
   - component: {fileID: 1424510806}
   - component: {fileID: 1424510805}
   m_Layer: 5
-  m_Name: JogarButton
+  m_Name: Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2004,7 +2004,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1397703375}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Joga
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2149,7 +2149,7 @@ GameObject:
   - component: {fileID: 1593467386}
   - component: {fileID: 1593467385}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2222,7 +2222,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1397703375}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: FecharOpcoes
+        m_MethodName: CloseOptions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
