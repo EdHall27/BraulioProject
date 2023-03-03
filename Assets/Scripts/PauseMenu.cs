@@ -6,12 +6,6 @@ public class PauseMenu : MonoBehaviour
 {
     public Transform pauseMenu;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -29,11 +23,11 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
     public void ResumeGame()
     {
         pauseMenu.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
-
 
 }
