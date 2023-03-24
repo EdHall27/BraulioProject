@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CircleCollider2D))]
+[RequireComponent(typeof(SphereCollider))]
 public class ItemPickUp : MonoBehaviour
 {
     public InventoryItemData itemData;
 
-    [SerializeField] private CircleCollider2D myCollider;
+    public float PickUpRadius = 1f;
+    private SphereCollider myCollider;
 
     private void Awake() {
-        myCollider = GetComponent<CircleCollider2D>();
+        myCollider = GetComponent<SphereCollider>();
         myCollider.isTrigger = true;
+        myCollider.radius = PickUpRadius;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -26,7 +28,7 @@ public class ItemPickUp : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
-            Destroy(this.gameObject);
+                Destroy(this.gameObject);
         }
     }
 }
