@@ -8,8 +8,7 @@ public class GunControl : MonoBehaviour
 
     public GameObject bullet;
     public Transform spawnBullet; 
-    
-
+    public bool isPauseGame = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +18,12 @@ public class GunControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isPauseGame)
+        {
         PlayerMouse();
         Shoot();
         //se a buller sair da main camera 
+        }
 
     }
 

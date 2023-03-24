@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float speed;
     GameObject player;
     Animation anim;
+    [SerializeField] GameObject powerUp;
     bool isAlive = true;
 
     // Start is called before the first frame update
@@ -28,12 +29,33 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+
         if (collision.CompareTag("Bullet"))
         {
             // Codigo para Animaçao do inimigo morto
             //anim.SetTrigger("Dead");
+
+            int randomNuber = Random.Range(0,10);
+            if (randomNuber >= 8)
+            {
+                Instantiate(powerUp, transform.position, Quaternion.Euler(0f, 0f, 0f));
+            }
+
             isAlive = false;
             Destroy(gameObject, 0.5f);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+   
+    {
+        
+        if(other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<HealthControl>().Damage();
+            Debug.Log("dano");
+        }
+    }
+}
 }
