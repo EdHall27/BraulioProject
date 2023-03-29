@@ -54,7 +54,6 @@ public class EnemyController : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<HealthControl>().Damage();
-            Debug.Log("dano");
         }
     }
 }
