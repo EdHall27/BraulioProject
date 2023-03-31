@@ -6,7 +6,9 @@ public class GunControl : MonoBehaviour
 {
     SpriteRenderer sprite;
 
-
+    public GameObject bullet;
+    public Transform spawnBullet; 
+    public bool isPauseGame = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,25 @@ public class GunControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isPauseGame)
+        {
+        PlayerMouse();
+        Shoot();
+        //se a buller sair da main camera 
+        }
+
+    }
+
+    void Shoot()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(bullet, spawnBullet.position, transform.rotation);
+        }
+    }
+
+     private void PlayerMouse()
+     {
         Vector3 mousePos = Input.mousePosition;
         Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.position);
 
@@ -26,6 +47,5 @@ public class GunControl : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,0,angle);
 
         sprite.flipY = (mousePos.x < screenPoint.x);
-
      }
 }
