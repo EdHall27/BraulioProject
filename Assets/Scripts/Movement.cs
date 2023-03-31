@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        PointController.Point = 0;
     }
 
     // Update is called once per frame

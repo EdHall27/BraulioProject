@@ -43,6 +43,7 @@ public class EnemyController : MonoBehaviour
             }
 
             isAlive = false;
+            PointController.Point++;
             Destroy(gameObject, 0.5f);
         }
     }
