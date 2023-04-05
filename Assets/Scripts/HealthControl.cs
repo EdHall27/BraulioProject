@@ -29,7 +29,9 @@ public class HealthControl : MonoBehaviour
         health -= 10;
         if(health <= 0)
         {
-           gameController.GameOver();
+            //gameController.GameOver();
+            gameController.GameOverMenu();
+            //gameController.gameOverPanel.gameObject.SetActive(true);
         }
         UpdateHealthBar();
     }

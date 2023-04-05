@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject gameOverPanel;
+    public Movement movement;
+    public GunControl bullet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +21,19 @@ public class GameController : MonoBehaviour
         
     }
 
+    public void GameOverMenu()
+    {
+        Time.timeScale = 0;
+        movement.isPauseGame = !movement.isPauseGame;
+        bullet.isPauseGame = !bullet.isPauseGame;
+        gameOverPanel.SetActive(true);
+
+    }
     public void GameOver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        movement.isPauseGame = !movement.isPauseGame;
+        bullet.isPauseGame = !bullet.isPauseGame;
+        Time.timeScale = 1;
     }
 }

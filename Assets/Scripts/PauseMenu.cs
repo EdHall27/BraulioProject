@@ -6,7 +6,6 @@ public class PauseMenu : MonoBehaviour
 {
     public Transform pauseMenu;
     public Movement movement;
-
     public GunControl bullet;
     void Start()
     {
@@ -44,5 +43,4 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-
 }
