@@ -10,6 +10,6 @@ public class InGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.textPoint.text = PointController.Point.ToString();
+        //this.textPoint.text = PointController.Point.ToString();
     }
 }

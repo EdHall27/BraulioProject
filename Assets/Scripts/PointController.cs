@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PointController 
+public class PointController : MonoBehaviour
 {
-    private static int point;
-    public static int Point
+    public int pointPerEnemy = 1;
+    //private int point;
+   /* public int Point
     {
         get
         {
@@ -13,13 +14,21 @@ public static class PointController
         } 
         set
         {
-            point =value;
-            if(point <0 )
+            point = value;
+            if(point < 0 )
             {
                point = 0;
             }
             Debug.Log("Point "+ Point);
         } 
+    }*/
+    public void EnemyDestroyed()
+    {
+        PointManager pointManager = GameObject.FindObjectOfType<PointManager>();
+        if(pointManager != null)
+        {
+            pointManager.AddScore(pointPerEnemy);
+        }
     }
 
 }

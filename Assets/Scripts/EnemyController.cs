@@ -10,10 +10,13 @@ public class EnemyController : MonoBehaviour
     [SerializeField] GameObject powerUp;
     bool isAlive = true;
 
+    private PointController pointController;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        pointController = GetComponent<PointController>();
         //anim = GetComponentInChildren<Animation>();
     }
 
@@ -37,14 +40,16 @@ public class EnemyController : MonoBehaviour
             //anim.SetTrigger("Dead");
 
             int randomNuber = Random.Range(0,10);
-            if (randomNuber >= 8)
+            if (randomNuber >= 4)
             {
                 Instantiate(powerUp, transform.position, Quaternion.Euler(0f, 0f, 0f));
             }
 
             isAlive = false;
-            PointController.Point++;
-            Destroy(gameObject, 0.5f);
+            
+            Destroy(gameObject, 0.1f);
+            pointController.EnemyDestroyed();
+            //PointController.Point++;
         }
     }
 
